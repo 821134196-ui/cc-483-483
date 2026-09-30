@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>演示机盘点与系统还原平台</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="dot"></span>演示机平台 <small>盘点 · 还原 · 调店 · 退仓</small></div>
+  <nav class="tabs" id="tabs"></nav>
+  <button class="bell" id="bell" title="通知">🔔<span class="n" id="bellN" hidden></span></button>
+  <div class="userbox">
+    <select id="userSelect" title="切换身份"></select>
+    <span class="role-chip" id="roleChip"></span>
+  </div>
+</header>
+<main id="app" class="page"></main>
+<div id="overlay"></div>
+<div class="toast-wrap" id="toasts"></div>
+<script src="/app.js"></script>
+</body>
+</html>
