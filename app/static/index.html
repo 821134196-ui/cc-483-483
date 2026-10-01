@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>演示机盘点与系统还原平台</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div id="login-view" class="login-wrap hidden">
+  <div class="login-card">
+    <div class="brand-mark"></div>
+    <h1>演示机盘点平台</h1>
+    <p class="sub">门店演示设备 · 开闭店盘点 · 系统还原</p>
+    <div class="pin-row">
+      <input id="pin-input" type="password" inputmode="numeric" maxlength="4"
+             placeholder="请输入 4 位 PIN" autocomplete="off">
+      <button id="login-btn" class="btn btn-primary">进入</button>
+    </div>
+    <div class="pin-hint">样例账号：导购 <b>1001</b> · 店长 <b>2002</b> · 技术 <b>3003</b></div>
+    <div id="login-error" class="error-text"></div>
+  </div>
+</div>
+
+<div id="app-view" class="hidden">
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="brand-mark sm"></div>
+      <span class="app-title">演示机盘点</span>
+    </div>
+    <nav class="nav-tabs" id="nav-tabs"></nav>
+    <div class="topbar-right">
+      <select id="store-select" class="store-select" title="切换门店"></select>
+      <button id="bell-btn" class="icon-btn" title="任务提醒">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6v-5a7 7 0 1 0-14 0v5l-2 2v1h18v-1l-2-2Z"/></svg>
+        <span id="bell-dot" class="bell-dot hidden"></span>
+      </button>
+      <div class="user-chip">
+        <span id="user-name"></span>
+        <span id="user-role" class="role-tag"></span>
+      </div>
+      <button id="logout-btn" class="btn btn-ghost btn-sm">退出</button>
+    </div>
+  </header>
+
+  <main id="main" class="main"></main>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+<div id="modal-root"></div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
